@@ -1,0 +1,4 @@
+#Для правильной кодировки Denwer'a
+
+AddDefaultCharset utf-8
+AddCharset utf-8 *
