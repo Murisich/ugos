@@ -791,3 +791,19 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/07/08 16:46:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in Z:\home\ugos\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\ugos\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 Z:\home\ugos\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\ugos\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 16:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in Z:\home\ugos\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\ugos\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 Z:\home\ugos\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\ugos\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
