@@ -173,9 +173,7 @@ class CMenu extends CWidget
 	{
 		if(count($items))
 		{
-			echo CHtml::openTag('ul',$this->htmlOptions)."\n";
 			$this->renderMenuRecursive($items);
-			echo CHtml::closeTag('ul');
 		}
 	}
 
