@@ -37,11 +37,12 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('login, password, email', 'required'),
-			array('login, password, email', 'length', 'max'=>128),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, login, password, email', 'safe', 'on'=>'search'),
+			array('name, surname, password, email', 'required'),
+			array('email', 'unique'),
+			array('password, email', 'length', 'max'=>128),
+			array('name, surname', 'length', 'max'=>20),
+			array('id, name, surname, password, email', 'safe', 'on'=>'search'),
+			array('email', 'email'),
 		);
 	}
 
@@ -63,9 +64,10 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'login' => 'Login',
-			'password' => 'Password',
-			'email' => 'Email',
+			'name' => 'Имя',
+			'surname' => 'Фамилия',
+			'password' => 'Пароль',
+			'email' => 'Почта',
 		);
 	}
 
@@ -81,12 +83,19 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('login',$this->login,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('surname',$this->surname,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('email',$this->email,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function beforeSave()
+	{
+		$this->password = md5('ugos'.$this->password);
+		return parent::beforeSave();
 	}
 }
