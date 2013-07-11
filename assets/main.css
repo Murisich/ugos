@@ -1,0 +1,13 @@
+.userform {
+	background: #4682B4;
+	padding: 10px;
+	color: #FFF;
+}
+
+.userform legend {
+	color: #FFF;
+}
+
+.userform td {
+	padding: 10px;
+}

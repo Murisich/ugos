@@ -6,6 +6,7 @@
 	<meta name="language" content="en" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/main.css" />
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/bootstrap.js"></script>
 
 
