@@ -2,6 +2,8 @@
 	background: #4682B4;
 	padding: 10px;
 	color: #FFF;
+	border: 5px solid #B0C4DE;
+	border-radius: 3px;
 }
 
 .userform legend {
@@ -10,4 +12,24 @@
 
 .userform td {
 	padding: 10px;
+}
+
+.user-view {
+	background: #4682B4;
+	padding: 10px;
+	color: #FFF;
+	border: 5px solid #B0C4DE;
+	border-radius: 3px;
+	width: 940px;
+	height: 200px;
+}
+
+.user-photo {
+	float: left;
+	width: 200px;
+}
+
+.user-info {
+	float: left;
+	width: 700px;
 }

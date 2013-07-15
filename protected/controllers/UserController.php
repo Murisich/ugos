@@ -147,4 +147,20 @@ class UserController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function sex($int)
+	{
+		if($int == 1) return 'Мужчина';
+		if($int == 2) return 'Женщина';
+	}
+
+	public function age($birthday)
+	{
+		$date = date("Y-m-d");  
+		$bday = $birthday;  
+		$date = str_replace('-','',$date); 
+		$bday = str_replace('-','',$bday); 
+		$result  = abs($date-$bday); 
+		return substr($result,0,-4);
+	}
 }
