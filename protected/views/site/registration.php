@@ -1,3 +1,7 @@
+<?php
+	$this->pageTitle=Yii::app()->name . ' - Регистрация';
+?>
+
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
 	'enableAjaxValidation'=>false,
